@@ -1,3 +1,7 @@
+<!-- Ao segurar ALT no VSCode conseguimos selecionar e editar mais de uma linha ao mesmo tempo -->
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,14 +34,50 @@
     <ul>
         <li></li>
     </ul>
-<!-- O "a" é usado para links, onde o link fica após o href="". Entre a abertura e a finalização do "a" é colocado alguma
- nomenclatura para aquele link. como por exemplo:<a href="Youtube.com">youtube</a>  -->
+<!-- O "a" é usado para links, onde o link fica após o href="". Entre a abertura e a finalização do "a" é colocado alguma nomenclatura para aquele link. como por exemplo:<a href="Youtube.com">youtube</a>  -->
     <a href=""></a>
-<!-- "img" é usado para determinar algum tipo de imamgem, o link da imagem ficaria após o "src="
- e no "alt" seria apenas a descrição da foto.  -->
+<!-- "img" é usado para determinar algum tipo de imamgem, o link da imagem ficaria após o "src=" e no "alt" seria apenas a descrição da foto.  -->
     <img src="" alt="">
-<!-- Para colocar um video se é usado "video", o link do vídeo fica logo após o "src=" -->
-    <video src=""></video>
-    
+<!-- Para colocar um video se é usado "video", o link do vídeo fica logo após o "src=" juntamente, dentro do <video> de incio se coloca a TAG "controls" para que assim ele rode na mesma aba-->
+    <video src="" controls></video>
+<!-- Para audio se usa "audio"  link do audio fica logo após o "src=" ,juntamente dentro do <audio> de incio se coloca a TAG "controls" para que assim ele rode na mesma aba-->
+    <audio src="" controls></audio>
+<!-- Para tabelas se usa o termo "table" e dentro dela colocamos as linhas "tr" e as colunas "td"-->
+    <table>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+<!-- Ao criar a TAG formulario se faz necessário a criação de uma outra pagina como por exemplo formulario.html, após selecionar a página temos que colocar o metódo que tem as opções "GET" onde passa por uma URL e "POST" vai para um servidor -->
+    <form action="formulario.html" method="get">
+        <label for="email">E-mail: </label> <!-- O label tem coligação com o "id" colocado no input (label = etiqueta, é um elemento HTML que representa uma legenda para melhorar a acessibilidade de um item de interface do usuário, e ao digitar ou escrever algo dentro do <label></label>, esta aparecerá ao lado -->
+        <input type="email" name="email" id="email"> <!--O termo input tem diversas TAGS para se usar, se escrever apenas a linha do input sem o label e o Button aparecerá apenas um caixa branca para preencher -->
+        
+        <label for="senha">Senha: </label>
+        <input type="password" name= senha id = senha> <!-- Ao colocar o Type "password" as letras ou número inseridos ficam no formato de bolinha como se estivesse com restrição -->
+
+        <button type="submit">Enviar</button> 
+
+        <label for="numero"> Digite um número: </label>
+        <input type="number" name="numero" id="numero" min="1" max="300"> <!-- Ao colocar as TAG's "min" ou "max" conseguimos estipular um limite no número em que será digitado definindo assim o seu limite mínimo ou máximo-->
+
+        <label for="CSS">CSS</label> <!-- o "for" no label significa que quando clicarmos na palavra ou no quadradinho de qualquer uma das formas ele será selecionado -->
+        <input type="checkbox" name="linguagens" id="CSS" value="CSS"> <!-- No checkbox mesmo se a tag "name" for identica as demais, na hora de rodar a pagina, dará para selecionar mais de uma opção-->
+
+        <label for="HTML">HTML</label>
+        <input type="checkbox" name="linguagens" id="HTML" value="HTML">
+
+        <label for="PYTHON">PYTHON</label>
+        <input type="checkbox" name="linguagens" id="PYTHON" value="PYTHON">
+
+        <label for="feminino"></label>
+        <input type="radio" name="generos" id="feminino"> <!-- No radio se a tag "name" for identica as demais, só será possível selecionar uma opção caso contrário poderá selecionar ambas -->
+        
+        <label for="masculino"></label>
+        <input type="radio" name="generos" id="masculino">
+
+        <button type="reset">Resetar</button> 
+        <button type="submit">Enviar</button> 
+    </form>
 </body>
 </html>

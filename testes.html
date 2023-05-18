@@ -49,7 +49,9 @@
 <!-- Para tabelas se usa o termo "table" e dentro dela colocamos as linhas "tr" e as colunas "td"-->
     <table>
         <tr>
-            <td></td>
+            <td> <!-- A tag "td" significa dados da tabela-->
+                <th></th> <!-- A tag "th" significa cabeçalho da tabela -->
+            </td>
         </tr>
     </table>
 <!-- Ao criar a TAG formulario se faz necessário a criação de uma outra pagina como por exemplo formulario.html, após selecionar a página temos que colocar o metódo que tem as opções "GET" onde passa por uma URL e "POST" vai para um servidor -->
@@ -136,5 +138,139 @@
     <a href="style2.css">testes.html</a> <!-- O titleatributo especifica informações extras sobre um elemento. As informações geralmente são mostradas como um texto de dica de ferramenta quando o mouse passa sobre o elemento. Exemplo -->
     <p>vou chorar
     </p>
+    <p><a href="#C4">Jump to Chapter 4</a></p> <!--  -->
+    <p><a href="#C8">Jump to Chapter 8</a></p>
+
+    <h1>Chapter 1</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+    <h1>Chapter 2</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+    <h1>Chapter 3</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+    <h1 id="C4">Chapter 4</h1> <!-- Use o idatributo (id=" value ") para definir marcadores em uma página -->
+    <p>This chapter explains ba bla bla bla</p>
+
+    <h1>Chapter 5</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+    <h1>Chapter 6</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+    <h1>Chapter 7</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+    <h1 id="C8">Chapter 8</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+    <h1>Chapter 7</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+
+    <h1>Chapter 7</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+
+    <h1>Chapter 7</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+
+    <h1>Chapter 7</h1>
+    <p>This chapter explains ba bla bla bla</p>
+
+
+    <h1>Chapter 7</h1>
+    <p>This chapter explains ba bla bla bla</p>
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" width="600px" height="100px"> <!-- Você pode usar o styleatributo para especificar a largura e a altura de uma imagem. -->
+    <img src="https://www.w3schools.com/html/programming.gif" alt="Computer man" style="width:48px;height:48px;"> <!-- Tag para inserir um GIF animado -->
+    <a href="default.asp"> <!-- Para usar uma imagem como link, coloque a <img>tag dentro da <a> tag: -->
+        <img src="https://www.w3schools.com/html/smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+    </a>
+    <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap">
+    <map name="workmap"> <!-- O nameatributo deve ter o mesmo valor do atributo <img>de usemap. -->
+        <area shape="rect" coords="34,44,270,350" href="index.html" alt="asas">
+    <map name="workmap">
+            <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+        </map>
+          
+        <script>
+         function myFunction() {
+          alert("You clicked the coffee cup!");
+        }
+        </script>
+
+    <style>
+        p{
+            background-image: url('img_girl.jpg');
+        }
+    </style>
+    <picture> <!-- O <picture> elemento contém um ou mais <source>elementos, cada um referindo-se a diferentes imagens por meio do srcset atributo. Desta forma, o navegador pode escolher a imagem que melhor se adapta à visualização e/ou dispositivo atual. Cada <source>elemento possui um mediaatributo que define quando a imagem é a mais adequada. -->
+        <source media="(min-width: 650px)" srcset="https://www.w3schools.com/html/img_food.jpg">
+        <source media="(min-width: 465px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+        <img src="https://www.w3schools.com/html/img_girl.jpg" style="width:auto;">
+      </picture>
+      <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) { /*o termo "nth-child()" é utilizado para selecionar um elemnto dentro de uma lista de elementos*/
+          background-color: #dddddd;
+        } /*O termo "even" é usado para valores pares e o "odd" para ímpares*/
+        </style>
+        </head>
+        <body>
+        
+        <h2>HTML Table</h2>
+        
+        <table>
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
+        </table>
+        <th colspan="2"></th> <!-- A tag "colspan" realiza a mesclagem de colunas -->
+        <th rowspan="2"></th><!-- A tag "rowspan" realiza a mesclagem de linhas -->
 </body>
 </html>

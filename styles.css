@@ -1,8 +1,10 @@
-body{
+body {
     font-family: Helvetica;
     text-align: center;
-    color: #fff; /*white*/
-    background-color: #333;/*gray*/
+    color: #fff;
+    /*white*/
+    background-color: #333;
+    /*gray*/
     padding: 0;
     margin: 0;
 }
@@ -11,8 +13,9 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    border-bottom: 1px solid #666;/*cinza mais claro*/
-    
+    border-bottom: 1px solid #666;
+    /*cinza mais claro*/
+
 
 }
 
@@ -28,7 +31,8 @@ ul li {
 }
 
 ul li a {
-    color:#fff; /*White*/
+    color: #fff;
+    /*White*/
 }
 
 h1 {
@@ -43,5 +47,5 @@ footer {
     padding: 20px;
     border-top: 1px solid #5a2a2a;
     margin-top: 20px;
-    
+
 }

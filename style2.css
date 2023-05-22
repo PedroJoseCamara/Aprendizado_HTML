@@ -3,11 +3,12 @@ ul {
 }
 
 body {
-    font-size: 107%; /* a Tag "font-size" determina o tamanha da fonte daquela determinada palavra*/
+    font-size: 107%;
+    /* a Tag "font-size" determina o tamanha da fonte daquela determinada palavra*/
 }
 
 a:link {
     color: aqua;
     background-color: black;
-    text-decoration:none
+    text-decoration: none
 }

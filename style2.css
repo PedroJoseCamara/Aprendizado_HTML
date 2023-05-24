@@ -13,6 +13,30 @@ a:link {
     text-decoration: none
 }
 
-tr:nth-child(even) { /* Quando se é utilizado o "even"  */
-    background-color: #208686;
+table ,td ,th {
+    border: 10px solid rgb(30, 6, 243);
+    border-collapse: #000000;
+}
+
+th:nth-child(even), td:nth-child(odd) { /* Quando se é utilizado o "even" para números pares, e a "odd" para os ímpares  */
+    background-color: #cc31b2;
+  }
+
+tr:nth-child(even) {
+        background-color: rgb(147, 218, 16);
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+  }
+  
+  th:nth-child(even),td:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+  }
+    tr { /*Adicione a border-bottompropriedade a todos tros elementos para obter divisores horizontais:*/
+        border-bottom: 5px solid #000000;
+  }
+
+  tr:hover{ /*Use o :hover seletor tr para destacar as linhas da tabela ao passar o mouse sobre:*/
+    background-color: violet;
   }

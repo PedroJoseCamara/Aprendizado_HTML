@@ -308,8 +308,70 @@
             </table>
             <th colspan="2"></th> <!-- A tag "colspan" realiza a mesclagem de colunas -->
             <th rowspan="2"></th><!-- A tag "rowspan" realiza a mesclagem de linhas -->
+            <table>
+                <colgroup>
+                    <!-- O <colgroup>elemento é usado para estilizar colunas específicas de uma tabela. O <colgroup>elemento deve ser usado como um contêiner para as especificações da coluna. Cada grupo é especificado com um <col>elemento. O spanatributo especifica quantas colunas recebem o estilo. O styleatributo especifica o estilo a ser dado às colunas. -->
+                    <col span="2" style="background-color: aquamarine;">
+                    <col span="3" style="visibility: collapse">
+                </colgroup>
 
-
+                <tr>
+                    <th>SEG</th>
+                    <th>TER</th>
+                    <th>QUA</th>
+                    <th>QUI</th>
+                    <th>SEX</th>
+                    <th>SAB</th>
+                    <th>DOM</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                </tr>
+            </table>
+            <dl> <!-- Uma lista de descrição é uma lista de termos, com uma descrição de cada termo. A <dl>tag define a lista de descrição, a <dt>tag define o termo (nome) e a <dd> tag descreve cada termo: A propriedade CSS list-style-typeé usada para definir o estilo do marcador de item da lista. Pode ter um dos seguintes valores-->
+                <dt>Coffee</dt>
+                <dd>- black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>- white cold drink</dd>
+              </dl>
+              <ul style="list-style-type:disc;"> <!-- ma lista não ordenada começa com a <ul>tag. Cada item da lista começa com a <li>tag. Os itens da lista serão marcados com marcadores (pequenos círculos pretos) por padrão: -->
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ul>
         </body>
 
 </html>

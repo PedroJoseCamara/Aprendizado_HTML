@@ -40,3 +40,5 @@ tr:nth-child(even) {
   tr:hover{ /*Use o :hover seletor tr para destacar as linhas da tabela ao passar o mouse sobre:*/
     background-color: violet;
   }
+
+  

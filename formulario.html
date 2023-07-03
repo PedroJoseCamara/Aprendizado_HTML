@@ -21,6 +21,16 @@
         })
     </script>
 
+    <form action="/action_page.php" autocomplete="on">
+        <!-- O autocompleteatributo especifica se um formulário deve ter o preenchimento automático ativado ou desativado. Quando o preenchimento automático está ativado, o navegador preenche automaticamente os valores com base nos valores que o usuário inseriu anteriormente. -->
+        <form action="/action_page.php" novalidate>
+            <!-- O novalidateatributo é um atributo booleano. Quando presente, especifica que os dados do formulário (input) não devem ser validados quando enviados. Exemplo -->
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+            <input type="submit">
+        </form>
 </body>
 
 </html>

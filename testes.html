@@ -6,10 +6,10 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres usado -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DALE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- O <meta>elemento normalmente é usado para especificar o conjunto de caracteres, a descrição da página, as palavras-chave, o autor do documento e as configurações da janela de visualização. -->
+    <title>DALE</title> <!-- Define um Título -->
     <link rel="stylesheet" href="style2.css"> <!-- Modo externo de aplicar o CSS -->
     <style>
         body {
@@ -96,13 +96,15 @@
         <button type="reset">Resetar</button>
         <button type="submit">Enviar</button>
     </form>
-    <iframe src="" frameborder="0"></iframe> <!-- A tag "iframe" é usada para abrir uma outra página HTML -->
-    <header></header> <!-- Cabeçalho da Página -->
-    <nav></nav> <!-- Qualquer tipo de conjunto de links -->
+    <iframe src="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_iframe_height_width_css" title="css"
+        style="height:200px; width:300px"></iframe>
+    <!-- A tag "iframe" é usada para abrir uma outra página HTML dentro de uma página HTML, nesta pagina conseguimos também definir a alura e a largura que ela ficará -->
+    <header></header> <!-- Define um cabeçalho para um documento ou uma seção -->
+    <nav></nav> <!-- Define um conjunto de links de navegação -->
     <main></main> <!-- Todo conteúdo principal do seu site -->
-    <footer></footer> <!-- Rodapé da página -->
+    <footer></footer> <!-- Define um rodapé para um documento ou uma seção -->
     <aside></aside> <!-- (Conteúdo secundário)Alguma informação aleatória na página -->
-    <section></section> <!-- Qualquer sessão no seu site -->
+    <section></section> <!--  Define uma seção em um documento -->
     <article></article> <!-- (conteúdo autônomo)Qualquer coisa que seja repetida no seu site -->
     <details> <!--(Conteúdo ocutável) Esta tag Possibilita criar um elemento que exibe ou oculta um conteúdo -->
         <summary>Clique aqui</summary>
@@ -400,17 +402,60 @@
                 <dt>Milk</dt>
                 <dd>- white cold drink</dd>
             </dl>
-            <fieldset></fieldset> <!-- A <fieldset>tag é usada para agrupar elementos relacionados em um formulário. A <fieldset>tag desenha uma caixa ao redor dos elementos relacionados. -->
-            
-            <label for="w3review">Review of W3Schools:</label> <!-- A <textarea>tag define um controle de entrada de texto de várias linhas. -->
+            <fieldset></fieldset>
+            <!-- A <fieldset>tag é usada para agrupar elementos relacionados em um formulário. A <fieldset>tag desenha uma caixa ao redor dos elementos relacionados. -->
+
+            <label for="w3review">Review of W3Schools:</label>
+            <!-- A <textarea>tag define um controle de entrada de texto de várias linhas. -->
 
             <textarea id="w3review" name="w3review" rows="4" cols="50">
             At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
             </textarea>
 
-            <p>My mother has <span style="color:blue;font-weight:bold;">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold;">dark green</span> eyes.</p> <!-- O <span>elemento é um contêiner embutido usado para marcar uma parte de um texto ou uma parte de um documento. -->
-            <p class="look">casa</p> <!-- Ao usar o atributo (class) conseguimos editar diversas outras seções que contém o mesmoo "class" atribuidos a outras tags. Os elementos HTML podem pertencer a mais de uma classe. Para definir várias classes, separe os nomes das classes com um espaço, por exemplo, <div class="city main">. O elemento será estilizado de acordo com todas as classes especificadas. No exemplo a seguir, o primeiro <h2>elemento pertence tanto à cityclasse quanto à mainclasse e obterá os estilos CSS de ambas as classes  -->
-            <p class="look">pai</p> 
-                
-        </body>      
+            <p>My mother has <span style="color:blue;font-weight:bold;">blue</span> eyes and my father has <span
+                    style="color:darkolivegreen;font-weight:bold;">dark green</span> eyes.</p>
+            <!-- O <span>elemento é um contêiner embutido usado para marcar uma parte de um texto ou uma parte de um documento. -->
+            <p class="look">casa</p>
+            <!-- Ao usar o atributo (class) conseguimos editar diversas outras seções que contém o mesmoo "class" atribuidos a outras tags. Os elementos HTML podem pertencer a mais de uma classe. Para definir várias classes, separe os nomes das classes com um espaço, por exemplo, <div class="city main">. O elemento será estilizado de acordo com todas as classes especificadas. No exemplo a seguir, o primeiro <h2>elemento pertence tanto à cityclasse quanto à mainclasse e obterá os estilos CSS de ambas as classes  -->
+            <p class="look">pai</p>
+            <iframe src="demo_iframe.htm" name="iframe_a" title="Iframe Example"></iframe>
+            <!-- Um iframe pode ser usado como o quadro de destino para um link. O targetatributo do link deve se referir ao nameatributo do iframe: -->
+            <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+            - <!-- JAVASCRIPT --> -
+            <p id="demo"></p>
+            <script> /* A tag HTML <script>é usada para definir um script do lado do cliente (JavaScript). O JavaScript geralmente é usado meio a um ID no código e após colcocarmos o id ai conseguimos dar uma função e/ou uma ação para o mesmo. */
+                document.getElementById("demo").innerHTML = "Hello JavaScript!";
+            </script>
+
+            <button type="button" onclick="myFunction0()">Click Me!</button>
+            <p id="aeeeee">This is a demonstration.</p>
+            <script>
+                function myFunction0() {
+                    document.getElementById("aeeeee").innerHTML = "Hello JavaScript!";
+                }
+            </script>
+
+            <p id="ser">JavaScript can change the style of an HTML element.</p>
+
+            <script>
+                function myFunction1() {
+                    document.getElementById("ser").style.fontSize = "25px";
+                    document.getElementById("ser").style.color = "red";
+                    document.getElementById("ser").style.backgroundColor = "yellow";
+                }
+            </script>
+
+            <button type="button" onclick="myFunction1()">Click Me!</button>
+
+            <script> /* A tag HTML <noscript>define um conteúdo alternativo a ser exibido para usuários que desativaram scripts em seus navegadores ou possuem um navegador que não suporta scripts */
+                document.getElementById("demo").innerHTML = "Hello JavaScript!";
+            </script>
+            <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIMAxQMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAACBQEGB//EAD4QAAIBAwIDBgQEBAUCBwAAAAECAwAEERIhBTFBEyJRYXGBFDKRoSNCscEGUnLRJENi4fEzUxUWgoOSovD/xAAZAQEBAQEBAQAAAAAAAAAAAAACAQADBAX/xAAoEQACAgEEAQMDBQAAAAAAAAAAAQIREgMhMUFRBBNxIjJhFEJDgZH/2gAMAwEAAhEDEQA/APlnY46VwxDzppGbG4oq78wK7nIQERHSrKhB3FP6AeldW3BPdFUgqqgnbbzqwiYct886cW2XPeyKOtmzDubiqURCgKMjl0qPb5GpRjPSnJIHU5Zc48KYtoBPupAcc1PSsYxjAR1ORXY4dPqedbr2Jk7pU+tdHDioHdJHQeJqWi0YojMb5IyDzFElshpBU41chWw1noXvAE+RpZreT5h02GBWTNRgT27DO1BWA+FeheNJI9JGlweR60k8BGcjFNMDRlvBtQtFayxDrQ5IF1ZphaM/RgVCgploTuaHoJbFUIDRk0ZY8DejrFpGSKoxxWKAahEUY7mq4z0rUSwRFUNMiEnc7Cp2YHnUoqYpoJ6VKcKHrhfI1KJcjVVWXmNQoqxI/UqftVlSRNwTjzoyhG+dMHxFch2VS0kIzGQ4/wBIzUERzggj1p21hDbRMQfXBp5VkUYmjEq9dY3rWVIzUgkC9w59RmrIWj5AgeW4rXt4YS2UBjPkcimWskk/y43PijaD99qOQsTLQJMBrQqf5kGftRf/AA18a4XWQDqp396YnsViGVWdG8GTI+ooPazwMNLEHzHP3rX4LQVXeIBJoj60cPFIvcPqcZNXteIW8w7O5XS/n1rk8NuWzEdLeIyCKPyUE4U4AGTyOBvR2tYzFoTTkDqaWa47EZJD9Mg0KTiBUbNn/UaWLZG0hS44cUc4XTnfJO1JXNodI2JOeZrXFxJcuO0dSuc4G+aJeadWSgQeVNWg7M80INBIbAq3whc4xj1rTNoJJMp3uu9GaFCxDFdPU08qBiYktp0GMeIqkfDiSzD64rQndNemE6gDimhGTGFjXA6k1bJVmDcQGIYbFZ7pknG9ejubZWG+5FZ8kCL0xTiCSMwQEDLVZUPJV98Uw+hT/M32oMjswxnA8BSoGRRgq/M2fIUNn/lXSKsV8qqV8q2JMgfOpVtJ8KlSi2elUHqpoyRqTtz8xTSQn+Uj0piO3U8yRXjyPTiKJAwOQAfSnoHwMSK+KLHbkfK49CKegjkXGyn2ouYkikMEMqjDD0ZaO9sY12BUeK0diAvfX200N7hlUrEQPWjdj4Ah2tUMxuSMY2NNWl2Lpx24hdScZzp2/Ss8OZDouRjJ+ZRzo/8A5bguhrSd8+ZzV27Jb6N4cH4deqFkEYJ5ZG31FLz/AMJSxPmxlVl/KusbelYb8FubFgySkDxXUtPWvEr+3iJFwkgBwBIc1Htwyp+UJcT4JPBJi5g7rf5qIefnWZJwKXRqhuUcY3TrmvY2/wDE07YSeOHB27ki4P1NOZtL0d6NQx8CMn9qq1JRI4RkfK57O6jlGY2Vh1UYpv4uURIt3plTlrBw4/vXuL7hE2C0cUc0A3KaT2noOleYuLu2hkbsuHyJJybtRuK7x1M+jjKGHYlJYXhQS2zJJCRksdtI86BKQi6ZSZP6dhWjbz3FzLqhjKqBu6nSF9c7UZ7fh8wzMc3HUQ7Rn3PL2pXXIeeDGgkR5AsSDV4AVoiBj87cugO1dmgcRdnAiQRnl2TZLe9chtWgRSTtzwarafBU2uRe5QHPZrv4isuaJ2yGr0E0wZOR1DlWYy5JZlJ8TSgwajRktZ0CS1K7g5rejiV+Rod1aagSAdq6ZHJx2s8/ormg1pfCNgkqagsnYbKauSDTMzSa7Wn8Cepx7ZqUM4jpno1nnA2s5z6KasLyVTk2sq+5q0LRqNowPTI/Q07DOw+V2H/uv/evk+7E+j7chZOKSjkkgP8AqJ/anLa+4hN/0Io2x1LkD707b3RX53Y+RYn9a0I7uFwNag46MoP60H6iK6EtCXkzTdcdx3YI/Zi370M3HGiNT619iP2rcee2IH4SD+nC/pQQtmX1BdJ8RIw/eovVR8CfppeTJ+LvzgSSufJZM07aG41BjPJ6EA1rRLYbao42/qbP601bjhq52VM+D1H6uAo+mki9nb3UgGi4jUkd5GGafueFMYE7RrbPNu7iicPueGxOra1JHUkVo3nEbFlKdrH2nTlmgtaLTdjcJJ1R5G64GcZCwSDoCowffArCz8PI8C2iROTuELKfrmvVS8RskdtMgbPkaTlvLGUklRnx7PP6itH1JJaPgyLb4mLdBJGPOYE/pWkpMyf4iJhIf80spyfMZwaG0liNwmfRcUOS7gbGmLYDpnP60/1CYfaozL3h1xIe/wDDzqp7uo4x7cqXThA7RRLZRKrH5lbA+1aUtyh3jWUf+oUI3TqNWiTHmdq6rXdHN6KsQnt7SCRoWgl0dSCaBLwx20hZsq3yhl2+vjT013GXYMUVsZIL4Iqsd6kkWqJ45EPVTkZprWaVgemmZb8KcMdaehB2oUnDdeBrUAdFrVa5wNioFLvcKObKDS/UsL0F4EU4WI+tGW3jTGf1rrXCf9xf/lQzNH/OPY1PebMtJLhF5Vh5tpPkN6VkMf5VPuKs00f84+tBeaIfmH1rZlwZDIegPtXKE08efm+9SpkbFiVvNfsm1pKzHlozt9qfs7bjExw9sVGOesL/AHqLftqyE39aYS7d+cpX0NeSU34PSoryNR8OvVLGdgoPJe3Gr6mrR2F0AS05Phi4WgxqrnJkB82NPW08UX/T7xH8kequTmzokEisGwNdw4Ph260e04U8bu99dxiNvlSN2LDwyTz+lLnid20gWIxxHo0oVQPoa7293cHTdcdZcHlAhH32NG5di2HXtFZf8LMwHjKkjf8A1AFS0ihWf/EXtvcjG8cSsMH+rXz8qG5sTKJJ+OXrFVwAgwo9AKH2fAZomilvOISo/wAwkkBH6VLLuaycR4ZbSKFh1b5B7Xnj3PiKl1xvhnYXDm8thIBt2SmRkJOPHc5pK2h4DFEYYEUauskpbPmRyNFEfCo0LW2iKVhj8Luj3xRqAspeRK54xHJZI9tIk8wb5mj7PV0wVwc+1ZvErgNci4luDA2ndY5jpUdRhF++c1rGJO2V2mTAGNDFiT6nPOmZoLOeBVYq+nknICmpxiGnI85Fxy67RY4bi1K/9xrVnb05DNE4vfXVvYzfiSa27hdLXCrnmRuMHHgTT04t4mLJAq+AB5Vn3d3G/cMGFxuc5zTWom+AuDSMa2vbj4doJuKkA/Issbgr7g+++aUnSWVHNxxAP3vk1s2rf7Ubi0sVnbyXUmAB8q+J6CvJT8TuriYtAzZIwVUbCvbptPc80lWxuxwQtKqPNjPPmcfamFeS0nPw0zJn8yk6W9q89bz38bBpXj8dLc/tTQv7qNlEwicdcAj703ONgwZstxG/7TPxGSOmhaNDxGRY/wDFPF6tgZrzb3k0rFUfLHcCMfbPOgvBPpSS5KoD0z3j70ZSjxQ4xa7PRXH8QW0LAdnrB/MoOBSqfxLbOxzEVXoSpOaxLhoomxGjyZxjWMA/elzauW1oNGroAQKirsrb6PYw8SjuYw8AicHw6VV7jxjA9q8xbWcrghIwZMYXL6c+niab4fLokMUt28bqDqifDY9M1U0Tc2fiF6p9hUrMadicpfWhXoSD/epV2JuaMfFrCT5J/qjD9qN8ZGR3Jo8eOoV4cCRRyceFHhu2Gzqr+Z51yel4Ep+T2RmZdz7b1w3bj83tXlob5EPcLxj/AE5p2LismdCSK39aD+4qY/guV9m38VIflWrC5nPJsDwrJN9dZ3SJh5Aj96sOJNjDwkf07VvpNua8byud9qbjVjtqUY5Vgw8RRnC6XXPUmtKKUlcgk+lCSKmaqQsO8ZB7UbUqc3yaxu1lU9cVGnYDvZAxnJrnjYrNOW8fB0tgeFDivZF5sfrWTLxC3ijLySqR4KQSfQUpLxcBVMMEjMf5sbeuKXtqjZHqXvEMZeVwqjmzdK8/f/xAO8tjCSekknj5D+9YlxcyzzBrltRU6QNsA+FWSbcloxpA2646b1vbx3LlZSVpbyRWvpO0YDur0+nKrKeiYAA7xA2zV3K9usZ3IUkZztjwpaXMhBIZUG+oc/Q5p/cTgsz4GplViOfQVDpVDI7rHqGwwDk+FWRVkOhyC25JfbkNqHeWjy9gVLABSHJOynUf2xVSV7mbdHZXnjjVoxoVmxnxWgSxARlWWcuORyCPvXIESBw9w5LZ272w9ao0BuQZkBVBydxgE/p1rrFVwc5cCxilRwrwrvy2xn6UxC+nOGkXA6Lq+m21UZprVdLPhX6Kdm+lXjnDb6tIPTVyNKQEO2pWV2Csqqi6l1t19z+lIF5prljJJhmB3pgyLpG2emRVsjIK4UjwY5x7UE6Y2rEHkVTsy5wAwKA4rtNtAQFKktkb6QSAalPImImt7LnDEMP9XP7UaKa1kX/FR532KnBFZ1WBpYoGTHzDbuxEU4AztrFUktpYyQUJx+ZdxSgfB2rQt7l0Ultkxz1kHPrUdoqdgI5p49kdgKIlzMNw5P8AVRpJFlcO+krz1FRk+/Wg9ppJMTZz0VeXvR5NwF+PlYADQCDz00f4q4dd5Dg9AcUi2D3gCMc9811rplASPGR+Y9KmJbY/BPPGwaOeQHzY4oF/xG5vStv2hdQcHA+Y+eOdDQXV1Ds7ac95m2UV0zQ2YKW5Ly/mkPT0rJf6axuG0S3X8TSX6+v7VZ3RwFjBx1/KoHn40n2UzL290wKAbDVt4iumVUCBJCGx3mPMeg6DlUx7sVhncjU0ehNGAWYnfxwKFavLO7NGsssgxvg4z7chyrRS2ilABizEF2XJBc7dPClhdrHCYPiRBlsfhpgD25n1op9JCaDx9rD+PMcEDQQgznPPb+1XIikHbRzMtuTqCdmFB8cdedJcPDNcksTdxJyKtjB8fHFGnvbm8jXtoyhhJBHIEnwouLs2Ry5vFkgZRCwLsMt1K+XhUQLgSlSMckLbb0vDazEl5MkKSCDzA6Yp6WylJiOSoPQbkCtKlsWN8mXMxupo7dFwzMFHqetO8cjaMW6Ryl1hi0bYwn/P1oMk/YzTzpJpcDCquM79fasuaXUxxtnmAOddoq6oEnV2DJJPPPtUXOdjg1wURGAIyAy5BP8AzXU5IYWSRlBkTUpODgcx9KZTOnaJioG5zge4pYt8PMpQPpOG7Nj5VdZ5bmZhGhOd9AA2Fc2hplxcqwBYMemy5/epUmE4YZt3QY2GhqlRRRcmZlSrKpJwATTEdrkd9gvXFdGznQtirICxAXc9BTYt0I7qM2Tz1DarNGsAP4ZxzDMcGpkipFY4lTPaHW2M6BnHuaPPcJEqiMADngDGfShG8DRYVEU8u7jJ+1BW0nkBYjGOeo8qNXyX4JJcPMBGBgZ2UUzDbpDH2twurbaPP3qlssVuC74cjp0/39KPBZ3N5OzmN8jfQATgVm9vwZAJ7uS4cRQLpB2CinLOy+HIMue2Y7HTnT6efnTsfDRZ5kKGFApYvJ821JyXCFHlZPwlOBqB3Pp16VzyvaPB0SreQ4s0S4kmRZBGhyDuTmsf4wfFdvDAurVnScmnrLVPAwXuwKMs0g6+g/5peWWCyVVtSHkYZYgVo7Nrs0t9yt0bgOZmlZVU6VbOcdcc+lAHZXEy/ETyHPdBCf712OBpYZDLkZbKnO2acjtvgo0lmg7YgZYs2ynpt16U7S+Q02Uu3itbMW9sz6snU3LUc+vT967w+aRbYsZGOo6c41aarcQ/GLJKmgMm+x+cny6VJGlsooraONRKw1HAySf2qUqo172a9iY++uxLAb6jn09aU4mk8jC61fDw6e4M7uB1AH74qZis9EhT8Urn8QZGT0x1pPiV8Z7aFA8rBV0nXt1PL61yjH67R0bqNCU1wJZTIwGs/mxSxySTXcVBz3r1cHnZwVZgynBUr5V3TkDHOrS7KFKkY6k1rNRe7O8WFH/SXfHlVLYgTrqbSM7mj3LHsIsjBMY3PX/9+9LhVYdwsG655VujI1TLNnCz9wDCgMcCu0jbcMu7lS0SAgHG7YqVyaiuzpk/ABvm/tV2dgcA4GM7bVKldAnWdkVNLEbFtvHNBklkdRqdjnfc12pVIwtuAIyQN9hn3rRiOqPS24x/apUoTLErKqrbq6gBtBPvmkld+zDa21FgM58q7UrafBXybXB1EkWZO+QuRqOepoXGlX4aU4HcOF8smu1K838p2/YZU8jrbwIrFVKnIG2dzT3DYYwJDpGRyz7VKleiXBzjyh+YCKzYxgKTHzHtS91DH8LG2gZ0A5FdqV5oc/2dJA/4dASRnXIbfrTrxqtgswH4kgfU3X/apUp6n3MC+089cyuTEhbugYA96FO7NI4YkheQ8KlSvRHg5sGK6fkzXalMjIm7LnoNq07tRJZWkrgGRyAzY3NSpQfKKuGZ91sU81/c1TlECNs88dalSkFGzwUa7dwxOA2wz5VKlSvLNvJnpjwf/9k=" style="max-width:100%;height:auto;"> <!-- Se a max-widthpropriedade estiver definida como 100%, a imagem será reduzida se necessário, mas nunca será ampliada para ficar maior que o tamanho original -->
+            <h1 style="font-size:10vw">Hello World</h1> <!--O tamanho do texto pode ser definido com uma unidade "vw", que significa a "largura da janela de visualização" Dessa forma, o tamanho do texto seguirá o tamanho da janela do navegador -->
+            
+        </body>
+
 </html>

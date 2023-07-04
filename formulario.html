@@ -2,6 +2,21 @@
 <html lang="pt-br">
 
 <head>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,11 +41,116 @@
         <form action="/action_page.php" novalidate>
             <!-- O novalidateatributo é um atributo booleano. Quando presente, especifica que os dados do formulário (input) não devem ser validados quando enviados. Exemplo -->
             <label for="fname">First name:</label>
+            <!-- O <label> elemento define um rótulo para vários elementos de formulário. O foratributo da <label>tag deve ser igual ao idatributo do <input> elemento para uni-los. -->
             <input type="text" id="fname" name="fname"><br><br>
+            <!-- O <input> elemento pode ser exibido de várias maneiras, dependendo do type atributo. -->
             <label for="email">Email:</label>
             <input type="text" id="email" name="email"><br><br>
             <input type="submit">
         </form>
+
+        <form action="/action_page.php">
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars" size="3" multiple> <!-- O <select>elemento define uma lista suspensa -->
+                <!-- Use o size atributo para especificar o número de valores visíveis -->
+                <!-- Use o multipleatributo para permitir que o usuário selecione mais de um valor -->
+                <option value="volvo">Volvo</option>
+                <!-- Os <option>elementos definem uma opção que pode ser selecionada. -->
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <input type="submit">
+        </form>
+
+        <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0
+            <input type="range" id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <!-- O <output>elemento representa o resultado de um cálculo (como um realizado por um script) -->
+            <br><br>
+            <input type="submit">
+        </form>
+
+        <!-- TIPOS DE INPUT HTML -->
+        <input type="button"> <!-- <input type="button">define um botão -->
+        <input type="checkbox"> <!-- <input type="checkbox">define uma caixa de seleção -->
+        <input type="color"> <!-- O <input type="color">é usado para campos de entrada que devem conter uma cor -->
+        <input type="date">
+        <!-- O <input type="date">é usado para campos de entrada que devem conter uma data, Você também pode usar os atributos mine maxpara adicionar restrições às datas-->
+        <input type="datetime-local">
+        <!-- O <input type="datetime-local">especifica um campo de entrada de data e hora, sem fuso horário -->
+        <input type="email">
+        <!-- O <input type="email">é usado para campos de entrada que devem conter um endereço de e-mail -->
+        <input type="file">
+        <!-- O <input type="file"> define um campo de seleção de arquivo e um botão "Procurar" para uploads de arquivos -->
+        <input type="hidden">
+        <!-- O <input type="hidden"> define um campo de entrada oculto (não visível para um usuário) -->
+        <input type="image">
+        <!-- O <input type="image"> define uma imagem como um botão de envio. O caminho para a imagem é especificado no srcatributo -->
+        <input type="month"> <!-- O <input type="month">permite ao usuário selecionar um mês e um ano. -->
+        <input type="number">
+        <!-- O <input type="number">define um campo de entrada numérica . Você também pode definir restrições sobre quais números são aceitos. -->
+        <input type="password"> <!-- <input type="password">define um campo de senha -->
+        <input type="radio"> <!-- <input type="radio">define um botão de opção -->
+        <input type="range">
+        <!-- O <input type="range">define um controle para inserir um número cujo valor exato não é importante (como um controle deslizante). O intervalo padrão é de 0 a 100. No entanto, você pode definir restrições sobre quais números são aceitos com os atributos min, maxe :step -->
+        <input type="reset">
+        <!-- <input type="reset">define um botão de redefinição que redefinirá todos os valores do formulário para seus valores padrão -->
+        <input type="search">
+        <!-- O <input type="search">é usado para campos de pesquisa (um campo de pesquisa se comporta como um campo de texto normal) -->
+        <input type="submit">
+        <!-- <input type="submit">define um botão para enviar dados de formulário para um manipulador de formulário, O manipulador de formulário é especificado no action atributo do formulário -->
+        <input type="tel">
+        <!-- O <input type="tel">é usado para campos de entrada que devem conter um número de telefone -->
+        <input type="text"> <!-- <input type="text">define um campo de entrada de texto de linha única -->
+        <input type="time"> <!-- O <input type="time">permite ao usuário selecionar um horário (sem fuso horário) -->
+        <input type="url"> <!-- O <input type="url">é usado para campos de entrada que devem conter um endereço URL -->
+        <input type="week"> <!-- O <input type="week">permite ao usuário selecionar uma semana e um ano -->
+
+        <!-- TIPOS DE VALUE -->
+
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <!-- O valueatributo de entrada especifica um valor inicial para um campo de entrada -->
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe" readonly>
+            <!--O readonlyatributo de entrada especifica que um campo de entrada é somente leitura. Um campo de entrada somente leitura não pode ser modificado (no entanto, um usuário pode tabular até ele, destacá-lo e copiar o texto dele). O valor de um campo de entrada somente leitura será enviado ao enviar o formulário! -->
+        </form>
+        disabled
+        <!-- O disabledatributo de entrada especifica que um campo de entrada deve ser desabilitado. Um campo de entrada desabilitado é inutilizável e não clicável. O valor de um campo de entrada desativado não será enviado ao enviar o formulário! -->
+        size
+        <!-- O sizeatributo de entrada especifica a largura visível, em caracteres, de um campo de entrada. O valor padrão para sizeé 20. Observação: o sizeatributo funciona com os seguintes tipos de entrada: texto, pesquisa, tel, url, e-mail e senha. -->
+        maxlength
+        <!-- O maxlengthatributo de entrada especifica o número máximo de caracteres permitidos em um campo de entrada. Observação: quando a maxlengthé definido, o campo de entrada não aceitará mais do que o número especificado de caracteres. No entanto, esse atributo não fornece nenhum feedback. Portanto, se você deseja alertar o usuário, deve escrever o código JavaScript. -->
+        mine max
+        <!-- A entrada mine maxos atributos especificam os valores mínimo e máximo para um campo de entrada. Os atributos mine maxfuncionam com os seguintes tipos de entrada: número, intervalo, data, data-hora-local, mês, hora e semana. Dica: Use os atributos max e min juntos para criar um intervalo de valores legais. -->
+        multiple
+        <!-- A entrada mine maxos atributos especificam os valores mínimo e máximo para um campo de entrada. Os atributos mine maxfuncionam com os seguintes tipos de entrada: número, intervalo, data, data-hora-local, mês, hora e semana. Dica: Use os atributos max e min juntos para criar um intervalo de valores legais. -->
+        pattern
+        <!-- O patternatributo de entrada especifica uma expressão regular com a qual o valor do campo de entrada é verificado quando o formulário é enviado. O patternatributo funciona com os seguintes tipos de entrada: texto, data, pesquisa, url, tel, e-mail e senha. -->
+        placeholder
+        <!-- O placeholderatributo de entrada especifica uma dica curta que descreve o valor esperado de um campo de entrada (um valor de amostra ou uma breve descrição do formato esperado). A dica curta é exibida no campo de entrada antes que o usuário insira um valor. O placeholderatributo funciona com os seguintes tipos de entrada: texto, pesquisa, url, tel, email e senha. -->
+        required
+        <!-- O requiredatributo de entrada especifica que um campo de entrada deve ser preenchido antes de enviar o formulário. O requiredatributo funciona com os seguintes tipos de entrada: texto, pesquisa, url, tel, e-mail, senha, selecionadores de data, número, caixa de seleção, rádio e arquivo. -->
+        step
+        <!-- O stepatributo de entrada especifica os intervalos de número legal para um campo de entrada. Exemplo: se step="3", os números legais podem ser -3, 0, 3, 6, etc. Dica: Este atributo pode ser usado junto com os atributos max e min para criar um intervalo de valores legais. O stepatributo funciona com os seguintes tipos de entrada: número, intervalo, data, data-hora-local, mês, hora e semana. -->
+        autofocus
+        <!-- O autofocusatributo de entrada especifica que um campo de entrada deve obter foco automaticamente quando a página for carregada. -->
+        heighte width
+        <!-- A entrada heighte widthos atributos especificam a altura e a largura de um <input type="image">elemento. -->
+        list
+        <!-- listO atributo input refere-se a um <datalist>elemento que contém opções predefinidas para um elemento <input>. -->
+        autocomplete
+        <!-- O autocompleteatributo de entrada especifica se um formulário ou um campo de entrada deve ter o preenchimento automático ativado ou desativado. O preenchimento automático permite que o navegador preveja o valor. Quando um usuário começa a digitar em um campo, o navegador deve exibir opções para preencher o campo, com base nos valores digitados anteriormente. O autocompleteatributo funciona com <form>os seguintes <input>tipos: text, search, url, tel, email, password, datepickers, range e color. -->
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> <!-- Exemplo de arrastar e soltar -->
+
+        <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
 </body>
 
 </html>
